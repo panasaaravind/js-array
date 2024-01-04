@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js Array Day1</title>
+        <style>
+            /*
+            selector{
+                property:value;
+            }
+            */
+            h1[data-myheading="myheading"]{
+                background-color:red;
+                color: #fff;
+                border-radius: 10px;
+            }   
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1 data-myheading="myheading"></h1>
+
+        <h1 class="naveen"></h1>
+        <p class="goud"></p>
+        <hr>
+        <h1 data-n3h1="n3h1"></h1>
+        <p data-n3p1="n3p1"></p>
+
+        <script src="./js/script.js"></script>
+        <script>
+            let students = ['aravind','chintu','srikanth'];  //js array
+
+            //array index number always starts with 0
+            console.log('hello'+' '+students[0]);
+            //2.
+            alert('hello'+' "'+students[1]+'"');
+            //3.
+            let h1=document.querySelector('[data-myheading]');
+            h1.innerHTML='hello '+students[2];
+
+            const $allnews=[{
+                n1h1:'India, South Africa play out shortest-ever Test in 147-year history: A look at 5 briefest matches of all time',
+                n1p1:'The second Test match between India and South Africa in Cape Town lasted 107 overs, making it the shortest-ever in history.'
+            },
+            {
+                n2h2:'Tips and tricks to excel in CBSE Class 12 physics board exams',
+                n2p2:'Mastering physics for the board exams necessitates a combination of effective study strategies, dedication, and a positive mindset.'
+            },
+            {
+                n3h1:"‘Rich Dad, Poor Dad’ author Robert Kiyosaki reveals $1.2 billion debt: ‘If I go bust…’",
+                n3p1:"Kiyosaki also said that he uses debt to pay for assets, and categorises luxury vehicles as 'liabilities.'"
+            }
+            ];
+                document.querySelector('h1.naveen').innerHTML=$allnews[0].n1h1;
+                document.querySelector('p.goud').innerHTML=$allnews[0]['n1p1'];
+
+
+
+                document.querySelector('h1[data-n3h1]').innerHTML=$allnews[2].n3h1;
+                let x="n3p1";
+                document.querySelector('p[data-n3p1]').innerHTML=$allnews[2][x];
+                
+
+
+        </script>
+    </body>
+</html> 

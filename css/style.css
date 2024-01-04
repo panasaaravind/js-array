@@ -1,0 +1,10 @@
+
+
+/*
+selector{
+    property:value;
+}
+*/
+h1[data-myheading="myheading"]{
+    background-color:red
+}
